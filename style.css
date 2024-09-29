@@ -29,7 +29,6 @@ h1 {
 }
 
 .rect {
-    background-color: blue;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,6 +45,6 @@ h1 {
     justify-content: space-evenly;
 }
 
-.user-input, #dimension {
+.user-input, #dimension, .submit {
     font-size: 35px;
 }

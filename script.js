@@ -3,6 +3,9 @@ let dimension = Number(prompt("Enter the dimension for canvas"));
 // Logic to ensure that the canvas dimension is a number between 10 and 100
 dimension = Math.max(16, dimension);
 dimension = Math.min(100, dimension);
+if(isNaN(dimension)) {
+    dimension = 16;
+}
 console.log(dimension);
 
 // Creating the canvas
@@ -26,3 +29,18 @@ for(let col = 0; col < dimension; col++) {
         div.appendChild(childDiv);
     }
 }
+
+// Logic to change color of the element
+const pixels = document.querySelectorAll(".square");
+
+let flag = false;
+pixels.forEach((pixel) => {
+    pixel.addEventListener('click', () => {
+        flag = !flag;
+    })
+    pixel.addEventListener('mouseover', () => {
+        if(flag) {
+            pixel.style.backgroundColor = 'gray';
+        }
+    })
+});
