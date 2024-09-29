@@ -45,6 +45,12 @@ h1 {
     justify-content: space-evenly;
 }
 
-.user-input, #dimension, .submit {
+.user-input, #dimension, .submit, #reset {
     font-size: 35px;
+}
+
+.reset-canvas {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
 }

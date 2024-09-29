@@ -44,3 +44,16 @@ pixels.forEach((pixel) => {
         }
     })
 });
+
+// Resetting logic
+
+const reset = document.querySelector("#reset");
+
+reset.addEventListener('click', () => {
+    for(let i = 0; i < dimension; i++) {
+        for(let j = 0; j < dimension; j++) {
+            const pixel = document.querySelector(`.square-${i}-${j}`);
+            pixel.style.backgroundColor = "white";
+        }
+    }
+});
