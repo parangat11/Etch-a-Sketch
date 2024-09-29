@@ -34,13 +34,14 @@ for(let col = 0; col < dimension; col++) {
 const pixels = document.querySelectorAll(".square");
 
 let flag = false;
+let randomColor = "gray";
 pixels.forEach((pixel) => {
     pixel.addEventListener('click', () => {
         flag = !flag;
+        randomColor = generateRandomColor();
     })
     pixel.addEventListener('mouseover', () => {
         if(flag) {
-            const randomColor = generateRandomColor();
             pixel.style.backgroundColor = randomColor;
         }
     })
