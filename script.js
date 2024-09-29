@@ -1,6 +1,6 @@
 let dimension = Number(prompt("Enter the dimension for canvas"));
 
-// Logic to ensure that the canvas dimension is a number between 10 and 100
+// Ensuring that the canvas dimension is a number between 10 and 100
 dimension = Math.max(16, dimension);
 dimension = Math.min(100, dimension);
 if(isNaN(dimension)) {
@@ -40,13 +40,24 @@ pixels.forEach((pixel) => {
     })
     pixel.addEventListener('mouseover', () => {
         if(flag) {
-            pixel.style.backgroundColor = 'gray';
+            const randomColor = generateRandomColor();
+            pixel.style.backgroundColor = randomColor;
         }
     })
 });
 
-// Resetting logic
+function generateRandomColor() {
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    r = r.toString(16);
+    g = g.toString(16);
+    b = b.toString(16);
+    const rgbValue = `#${r}${g}${b}`;
+    return rgbValue;
+}
 
+// Resetting the canvas
 const reset = document.querySelector("#reset");
 
 reset.addEventListener('click', () => {
