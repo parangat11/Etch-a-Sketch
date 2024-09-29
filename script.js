@@ -63,6 +63,7 @@ function generateRandomColor() {
 const reset = document.querySelector("#reset");
 
 reset.addEventListener('click', () => {
+    flag = false;
     for(let i = 0; i < dimension; i++) {
         for(let j = 0; j < dimension; j++) {
             const pixel = document.querySelector(`.square-${i}-${j}`);
