@@ -19,10 +19,33 @@ h1 {
 .container {
     border: 2px solid black;
     margin-top: 10px;
+    padding: 0px;
     height: 960px;
+    width: 960px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rect {
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
     width: 960px;
 }
 
-/* .user-input, #dimension {
+.square {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border: 0.1px solid black;
+    justify-content: space-evenly;
+}
+
+.user-input, #dimension {
     font-size: 35px;
-} */
+}
