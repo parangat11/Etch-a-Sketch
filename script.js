@@ -46,6 +46,7 @@ pixels.forEach((pixel) => {
     })
 });
 
+//Utility function to generate random color
 function generateRandomColor() {
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
